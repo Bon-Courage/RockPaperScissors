@@ -5,12 +5,13 @@ function getComputerChoice() {
     else return "scissors"
 }
 
-function getPlayerChoice() {
-    let choice = Math.random()
-    if (choice <= 0.33) { return "rock" }
-    else if (choice <= .66) { return "paper" }
-    else return "scissors"
-}
+// function getPlayerChoice() {
+//     let choice = Math.random()
+//     if (choice <= 0.33) { return "rock" }
+//     else if (choice <= .66) { return "paper" }
+//     else return "scissors"
+// }
+
 
 function playRound(playerSelection, ComputerChoice) {
     if (playerSelection.toUpperCase() == "ROCK" && ComputerChoice.toUpperCase() == "SCISSORS") { console.log(`Player wins. Player's ${playerSelection.toUpperCase()} beats Computer's ${ComputerChoice.toUpperCase()}!`); return 1 }
@@ -25,7 +26,7 @@ function game() {
     let userWins = 0;
     let compWins = 0;
     for (let i = 0; i < 5; i++) {
-        let result = playRound(getComputerChoice(), getPlayerChoice());
+        let result = playRound(prompt(), getComputerChoice());     //where the inputs are coming from.
 
         if (result === 1) {
             userWins++;
@@ -33,7 +34,7 @@ function game() {
         } else if (result === -1) {
             compWins++
         } else {
-            i--;
+            i--;                           // takes 1 away so that that round does not count. 
         }
     }
     if (userWins > compWins) { console.log(`The User won by ${userWins} to ${compWins}`) }
