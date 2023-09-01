@@ -39,8 +39,6 @@
 /* button control */
 
 .mainPlayerChoice .fa-solid:hover {
-    transform: scale(2);
-    transition: transform .2s ease-in;
     cursor: pointer;
 }
 
@@ -53,9 +51,8 @@
 }
 
 .mainPlayerChoice .ninjaIcon:hover {
-    color: red;
+    color: purple;
 }
-
 
 .mainPlayerChoice>button {
     width: 75px;
@@ -64,6 +61,21 @@
     background-color: white;
     border: none;
 }
+
+
+.hunterIcon.selected {
+    color: red;
+}
+
+.hippoIcon.selected {
+    color: green;
+}
+
+.ninjaIcon.selected {
+    color: purple;
+}
+
+
 
 /* game Results */
 
