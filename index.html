@@ -6,10 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="styles.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a19be56f66.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <header class="headerBox">
+        <h1 class="headerTitle"><span class="color-red">Hunter</span> <span class="color-green">Hippo</span> <span
+                class="color-purple">Ninja</span></h1>
+        <p class="headerBlurb"> 3 Foes | 5 Lives | 2 Destinies</p>
+        <p class="headerRules"><span class="color-red">Hunter</span> shoots <span class="color-green">Hippo</span> |
+            <span class="color-green">Hippo</span> eats <span class="color-purple">Ninja</span> | <span
+                class="color-purple">Ninja</span> slays <span class="color-red">Hunter</span>
+        </p>
+        <p class="instruct">Choose to begin...</p>
+    </header>
+
+    <main class="mainContent">
+        <div class="mainPlayerChoice">
+            <button class="hunterButton"><i class="hunterIcon fa-solid fa-person-rifle fa-2xl"></i></button>
+            <button class="hippoButton"><i class="hippoIcon fa-solid fa-hippo fa-2xl"></i></button>
+            <button class="ninjaButton"><i class="ninjaIcon fa-solid fa-user-ninja fa-2xl"></i></button>
+        </div>
+        <div class="page-divider">
+            <img src="images/divider.png">
+        </div>
+        <div class="gameResults">
+            <div class="compChoice">
+                <p class="foe-label">Your Foe Chose:</p>
+                <i class="foe-pic fa-solid fa-computer fa-2xl"></i>
+            </div>
+            <div class="gameoutput">
+                <p class="output-text roundDisplay">Round: <span class="roundCount"></span></p>
+                <p class="output-text livesleft">Your lives:<span class="userLifeCount"></span> Enemy's lives: <span
+                        class="compLifeCount"></span></p>
+                <p class="output-text story-text">Combat Report: <span class="combatReport">Awaiting Combatants</span>
+                </p>
+            </div>
+        </div>
+    </main>
+
     <script src="script.js"></script>
 </body>
 

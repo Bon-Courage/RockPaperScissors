@@ -1,3 +1,109 @@
-body {
-    background-color: whitesmoke;
+/* Header styles */
+
+.headerBox {
+    text-align: center;
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-size: larger;
+}
+
+.color-purple {
+    color: purple;
+}
+
+.color-green {
+    color: green;
+}
+
+.color-red {
+    color: red;
+}
+
+/* Main Content styles */
+
+.mainContent {
+    display: flex;
+    max-width: 700px;
+    flex-direction: column;
+    margin: 30px auto;
+    font-family: 'Sedgwick Ave Display', cursive;
+}
+
+.mainPlayerChoice {
+    border: solid black 2px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 150px;
+}
+
+/* button control */
+
+.mainPlayerChoice .fa-solid:hover {
+    transform: scale(2);
+    transition: transform .2s ease-in;
+    cursor: pointer;
+}
+
+.mainPlayerChoice .hunterIcon:hover {
+    color: red;
+}
+
+.mainPlayerChoice .hippoIcon:hover {
+    color: green;
+}
+
+.mainPlayerChoice .ninjaIcon:hover {
+    color: red;
+}
+
+
+.mainPlayerChoice>button {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: white;
+    border: none;
+}
+
+/* game Results */
+
+.page-divider {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.gameResults {
+    display: flex;
+    border: solid black 2px;
+}
+
+.compChoice {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    border: solid black 2px;
+    align-items: center;
+}
+
+.gameoutput {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    border: solid black 2px;
+}
+
+.foe-label {
+    margin-top: 10px;
+    display: block;
+    margin-bottom: -20px;
+}
+
+.foe-pic {
+    display: block;
+    margin: auto;
+}
+
+.output-text {
+    margin: 10px;
 }
