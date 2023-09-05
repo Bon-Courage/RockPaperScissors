@@ -42,7 +42,7 @@
         <div class="gameResults">
             <div class="compChoice">
                 <p class="foe-label">Your Foe Chose:</p>
-                <i class="foe-pic fa-solid fa-computer fa-2xl"></i>
+                <div class="compChoiceIcon"><i class="foe-pic fa-solid fa-computer fa-2xl"></i></div>
             </div>
             <div class="gameoutput">
                 <p class="output-text roundDisplay">Round: <span class="roundCount"></span></p>
@@ -52,6 +52,13 @@
                 </p>
             </div>
         </div>
+
+        <div class="modal" id="endgameModal">
+            <p class="modal-title" id="endgameMsg"></p>
+            <button class="btn btn-restart" id="restartBtn">Play again</button>
+        </div>
+        <div class="overlay" id="overlay"></div>
+
     </main>
 
     <script src="script.js"></script>

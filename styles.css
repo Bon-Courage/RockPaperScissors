@@ -98,6 +98,8 @@
     align-items: center;
 }
 
+
+
 .gameoutput {
     display: flex;
     flex-direction: column;
@@ -105,17 +107,67 @@
     border: solid black 2px;
 }
 
-.foe-label {
-    margin-top: 10px;
-    display: block;
-    margin-bottom: -20px;
-}
-
-.foe-pic {
-    display: block;
-    margin: auto;
-}
-
 .output-text {
     margin: 10px;
+}
+
+.hunterIcon.foe-pic {
+    color: red;
+}
+
+.hippoIcon.foe-pic {
+    color: green;
+}
+
+.ninjaIcon.foe-pic {
+    color: purple;
+}
+
+
+/* MODALS */
+
+.modal {
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: var(--primary-dark);
+    text-align: center;
+    font-size: 30px;
+    user-select: none;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-title {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.btn-restart {
+    padding: 10px 20px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.6;
+}
+
+.overlay.active {
+    display: block;
 }
