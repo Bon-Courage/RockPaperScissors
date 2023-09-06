@@ -105,6 +105,7 @@
     flex-direction: column;
     width: 75%;
     border: solid black 2px;
+    padding-left: 1rem;
 }
 
 .output-text {
@@ -123,6 +124,14 @@
     color: purple;
 }
 
+.totalCounts {
+    display: flex;
+}
+
+.count {
+    display: inline-block;
+    margin: 0 2rem 0 0
+}
 
 /* MODALS */
 
@@ -134,7 +143,9 @@
     width: 300px;
     padding: 30px;
     border-radius: 10px;
-    background-color: var(--primary-dark);
+    background-color: rgb(93, 93, 192);
+    opacity: 0.9;
+    ;
     text-align: center;
     font-size: 30px;
     user-select: none;

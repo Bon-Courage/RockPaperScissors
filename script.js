@@ -8,6 +8,9 @@ const userLifeCount = document.querySelector(`.userLifeCount`);
 const compLifeCount = document.querySelector(`.compLifeCount`);
 const combatReport = document.querySelector(`.combatReport`);
 const compChoiceIcon = document.querySelector('.compChoiceIcon')
+const gamesPlayedCount = document.querySelector('.totalGames');
+const gamesWonCount = document.querySelector('.totalWins');
+const gamesLostCount = document.querySelector('.totalLosses');
 
 const winnerDeclared = document.querySelector(`.modal-title`)
 const endgameModal = document.getElementById('endgameModal');
@@ -173,18 +176,40 @@ function openEndgameModal() {
 restartBtn.addEventListener('click', () => {
     endgameModal.classList.remove('active');
     overlay.classList.remove('active');
+    updateCounts();
     resetResults();
-
 })
 
+// This function resets the form after a game has been completed. 
+
 function resetResults() {
-    compLifeCount.textContent = ``;
-    userLifeCount.textContent = ``;
+    compLifeCount.textContent = `5`;
+    userLifeCount.textContent = `5`;
     roundCount.textContent = ``;
     combatReport.textContent = `Awaiting Combatants`
     compChoiceIcon.innerHTML = `<i class="foe-pic fa-solid fa-computer fa-2xl"></i>`
     resetAnimation()
+    userLives = 5;
+    compLives = 5;
+    round = 0;
 }
 
+//This function updates the counts for total games, total wins and total losses. 
+
+let gamesPlayed = 0;
+let gamesWon = 0;
+let gamesLost = 0;
 
 
+function updateCounts() {
+    gamesPlayed++;
+    gamesPlayedCount.textContent = `${gamesPlayed}`
+    if (userLives == 0) {
+        gamesLost++
+        gamesLostCount.textContent = `${gamesLost}`
+    }
+    else if (compLives == 0) {
+        gamesWon++
+        gamesWonCount.textContent = `${gamesWon}`
+    }
+}
